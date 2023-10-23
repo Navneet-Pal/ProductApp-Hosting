@@ -9,7 +9,9 @@ import { useState } from 'react';
 
 function App() {
 
-  const [token,settoken]= useState();
+  const [token,settoken]= useState(function (){ return localStorage.getItem("token") ? localStorage.getItem("token") : null } );
+
+
 
   return (
     <div className="App min-w-screen min-h-screen overflow-x-hidden">

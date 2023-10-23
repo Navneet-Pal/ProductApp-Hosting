@@ -5,7 +5,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 function Navbar({token,settoken}) {
 
   const navigate = useNavigate();
-
+  console.log(token)
 
   function logoutHandler(){
     localStorage.removeItem("token");
