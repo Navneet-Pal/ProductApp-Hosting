@@ -20,6 +20,13 @@ app.use("/api" , basicRoute);
 
 const port = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+	return res.json({
+		success: true,
+		message: "server is up and running ...",
+	});
+});
+
 app.listen(port , ()=>{
     console.log("server is active now")
 })
